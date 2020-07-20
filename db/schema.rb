@@ -73,6 +73,7 @@ ActiveRecord::Schema.define(version: 2020_01_28_183708) do
     t.string "value"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["key"], name: "index_settings_on_key", unique: true
   end
 
   create_table "users", id: :serial, force: :cascade do |t|
